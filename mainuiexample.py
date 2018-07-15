@@ -192,6 +192,7 @@ def settablevalue(tablepath1, mac, ip):
 def pandasreadtable(tablepath1):
     d = pd.read_excel(tablepath, sheet_name="1",index_col=0)
     print(d)
+    print("")
 
 
 
