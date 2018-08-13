@@ -1,0 +1,870 @@
+Index: .idea/Example.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/Example.iml	(date 1531627500000)
++++ .idea/Example.iml	(date 1531627500000)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++  <component name="TestRunnerService">
++    <option name="projectConfiguration" value="Nosetests" />
++    <option name="PROJECT_TEST_RUNNER" value="Nosetests" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(date 1531627500000)
++++ .idea/modules.xml	(date 1531627500000)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/Example.iml" filepath="$PROJECT_DIR$/.idea/Example.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1531627500000)
++++ .idea/vcs.xml	(date 1531627500000)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: mainui.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- mainui.py	(date 1531627500000)
++++ mainui.py	(date 1531627500000)
+@@ -0,0 +1,130 @@
++# -*- coding: utf-8 -*-
++
++# Form implementation generated from reading ui file 'mainui.ui'
++#
++# Created by: PyQt5 UI code generator 5.11.2
++#
++# WARNING! All changes made in this file will be lost!
++
++from PyQt5 import QtCore, QtGui, QtWidgets
++
++class Ui_MainWindow(object):
++    def setupUi(self, MainWindow):
++        MainWindow.setObjectName("MainWindow")
++        MainWindow.resize(800, 600)
++        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
++        sizePolicy.setHorizontalStretch(0)
++        sizePolicy.setVerticalStretch(0)
++        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
++        MainWindow.setSizePolicy(sizePolicy)
++        self.centralwidget = QtWidgets.QWidget(MainWindow)
++        self.centralwidget.setObjectName("centralwidget")
++        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
++        self.pushButton.setGeometry(QtCore.QRect(320, 280, 59, 32))
++        self.pushButton.setObjectName("pushButton")
++        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
++        self.pushButton_2.setGeometry(QtCore.QRect(150, 290, 81, 35))
++        self.pushButton_2.setObjectName("pushButton_2")
++        self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
++        self.layoutWidget.setGeometry(QtCore.QRect(10, 10, 621, 146))
++        self.layoutWidget.setObjectName("layoutWidget")
++        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.layoutWidget)
++        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
++        self.verticalLayout_2.setObjectName("verticalLayout_2")
++        self.groupBox = QtWidgets.QGroupBox(self.layoutWidget)
++        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
++        sizePolicy.setHorizontalStretch(0)
++        sizePolicy.setVerticalStretch(0)
++        sizePolicy.setHeightForWidth(self.groupBox.sizePolicy().hasHeightForWidth())
++        self.groupBox.setSizePolicy(sizePolicy)
++        self.groupBox.setObjectName("groupBox")
++        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.groupBox)
++        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
++        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
++        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
++        self.label_2 = QtWidgets.QLabel(self.groupBox)
++        self.label_2.setObjectName("label_2")
++        self.horizontalLayout_2.addWidget(self.label_2)
++        self.UPMaclineEdit_2 = QtWidgets.QLineEdit(self.groupBox)
++        self.UPMaclineEdit_2.setObjectName("UPMaclineEdit_2")
++        self.horizontalLayout_2.addWidget(self.UPMaclineEdit_2)
++        self.horizontalLayout_3.addLayout(self.horizontalLayout_2)
++        self.horizontalLayout = QtWidgets.QHBoxLayout()
++        self.horizontalLayout.setObjectName("horizontalLayout")
++        self.label = QtWidgets.QLabel(self.groupBox)
++        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
++        sizePolicy.setHorizontalStretch(0)
++        sizePolicy.setVerticalStretch(0)
++        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
++        self.label.setSizePolicy(sizePolicy)
++        self.label.setScaledContents(False)
++        self.label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
++        self.label.setObjectName("label")
++        self.horizontalLayout.addWidget(self.label)
++        self.CCHPMaclineEdit = QtWidgets.QLineEdit(self.groupBox)
++        self.CCHPMaclineEdit.setObjectName("CCHPMaclineEdit")
++        self.horizontalLayout.addWidget(self.CCHPMaclineEdit)
++        self.horizontalLayout_3.addLayout(self.horizontalLayout)
++        self.verticalLayout_2.addWidget(self.groupBox)
++        self.groupBox_2 = QtWidgets.QGroupBox(self.layoutWidget)
++        self.groupBox_2.setObjectName("groupBox_2")
++        self.verticalLayout = QtWidgets.QVBoxLayout(self.groupBox_2)
++        self.verticalLayout.setObjectName("verticalLayout")
++        self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
++        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
++        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
++        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
++        self.label_3 = QtWidgets.QLabel(self.groupBox_2)
++        self.label_3.setObjectName("label_3")
++        self.horizontalLayout_4.addWidget(self.label_3)
++        self.MAC5glineEdit_3 = QtWidgets.QLineEdit(self.groupBox_2)
++        self.MAC5glineEdit_3.setObjectName("MAC5glineEdit_3")
++        self.horizontalLayout_4.addWidget(self.MAC5glineEdit_3)
++        self.horizontalLayout_6.addLayout(self.horizontalLayout_4)
++        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
++        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
++        self.label_4 = QtWidgets.QLabel(self.groupBox_2)
++        self.label_4.setObjectName("label_4")
++        self.horizontalLayout_5.addWidget(self.label_4)
++        self.MAC4glineEdit_4 = QtWidgets.QLineEdit(self.groupBox_2)
++        self.MAC4glineEdit_4.setObjectName("MAC4glineEdit_4")
++        self.horizontalLayout_5.addWidget(self.MAC4glineEdit_4)
++        self.horizontalLayout_6.addLayout(self.horizontalLayout_5)
++        self.verticalLayout.addLayout(self.horizontalLayout_6)
++        self.verticalLayout_2.addWidget(self.groupBox_2)
++        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
++        self.pushButton_3.setGeometry(QtCore.QRect(230, 210, 114, 32))
++        self.pushButton_3.setObjectName("pushButton_3")
++        MainWindow.setCentralWidget(self.centralwidget)
++        self.menubar = QtWidgets.QMenuBar(MainWindow)
++        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 22))
++        self.menubar.setObjectName("menubar")
++        MainWindow.setMenuBar(self.menubar)
++        self.statusbar = QtWidgets.QStatusBar(MainWindow)
++        self.statusbar.setObjectName("statusbar")
++        MainWindow.setStatusBar(self.statusbar)
++
++        self.retranslateUi(MainWindow)
++        self.pushButton.clicked.connect(MainWindow.opendir)
++        self.pushButton_2.clicked.connect(MainWindow.openme)
++        self.UPMaclineEdit_2.editingFinished.connect(MainWindow.inputUPM)
++        self.CCHPMaclineEdit.editingFinished.connect(MainWindow.inputCCHPM)
++        self.MAC5glineEdit_3.editingFinished.connect(MainWindow.input5gM)
++        self.MAC4glineEdit_4.editingFinished.connect(MainWindow.input4gM)
++        self.pushButton_3.clicked.connect(MainWindow.generatetxt)
++        QtCore.QMetaObject.connectSlotsByName(MainWindow)
++
++    def retranslateUi(self, MainWindow):
++        _translate = QtCore.QCoreApplication.translate
++        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
++        self.pushButton.setText(_translate("MainWindow", "dir"))
++        self.pushButton_2.setText(_translate("MainWindow", "message"))
++        self.groupBox.setTitle(_translate("MainWindow", "VLTE UE configration"))
++        self.label_2.setText(_translate("MainWindow", "UP ETH MAC"))
++        self.UPMaclineEdit_2.setPlaceholderText(_translate("MainWindow", "example 00:00:00:00:00:00"))
++        self.label.setText(_translate("MainWindow", "CCHP ETH MAC"))
++        self.groupBox_2.setTitle(_translate("MainWindow", "baseband MAC"))
++        self.label_3.setText(_translate("MainWindow", "5G MAC"))
++        self.label_4.setText(_translate("MainWindow", "4G MAC"))
++        self.pushButton_3.setText(_translate("MainWindow", "generate"))
++
+Index: mainui.ui
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- mainui.ui	(date 1531627500000)
++++ mainui.ui	(date 1531627500000)
+@@ -0,0 +1,314 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<ui version="4.0">
++ <class>MainWindow</class>
++ <widget class="QMainWindow" name="MainWindow">
++  <property name="geometry">
++   <rect>
++    <x>0</x>
++    <y>0</y>
++    <width>800</width>
++    <height>600</height>
++   </rect>
++  </property>
++  <property name="sizePolicy">
++   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
++    <horstretch>0</horstretch>
++    <verstretch>0</verstretch>
++   </sizepolicy>
++  </property>
++  <property name="windowTitle">
++   <string>MainWindow</string>
++  </property>
++  <widget class="QWidget" name="centralwidget">
++   <widget class="QPushButton" name="pushButton">
++    <property name="geometry">
++     <rect>
++      <x>320</x>
++      <y>280</y>
++      <width>59</width>
++      <height>32</height>
++     </rect>
++    </property>
++    <property name="text">
++     <string>dir</string>
++    </property>
++   </widget>
++   <widget class="QPushButton" name="pushButton_2">
++    <property name="geometry">
++     <rect>
++      <x>150</x>
++      <y>290</y>
++      <width>81</width>
++      <height>35</height>
++     </rect>
++    </property>
++    <property name="text">
++     <string>message</string>
++    </property>
++   </widget>
++   <widget class="QWidget" name="layoutWidget">
++    <property name="geometry">
++     <rect>
++      <x>10</x>
++      <y>10</y>
++      <width>621</width>
++      <height>146</height>
++     </rect>
++    </property>
++    <layout class="QVBoxLayout" name="verticalLayout_2">
++     <item>
++      <widget class="QGroupBox" name="groupBox">
++       <property name="sizePolicy">
++        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
++         <horstretch>0</horstretch>
++         <verstretch>0</verstretch>
++        </sizepolicy>
++       </property>
++       <property name="title">
++        <string>VLTE UE configration</string>
++       </property>
++       <layout class="QHBoxLayout" name="horizontalLayout_3">
++        <item>
++         <layout class="QHBoxLayout" name="horizontalLayout_2">
++          <item>
++           <widget class="QLabel" name="label_2">
++            <property name="text">
++             <string>UP ETH MAC</string>
++            </property>
++           </widget>
++          </item>
++          <item>
++           <widget class="QLineEdit" name="UPMaclineEdit_2">
++            <property name="placeholderText">
++             <string>example 00:00:00:00:00:00</string>
++            </property>
++           </widget>
++          </item>
++         </layout>
++        </item>
++        <item>
++         <layout class="QHBoxLayout" name="horizontalLayout">
++          <item>
++           <widget class="QLabel" name="label">
++            <property name="sizePolicy">
++             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
++              <horstretch>0</horstretch>
++              <verstretch>0</verstretch>
++             </sizepolicy>
++            </property>
++            <property name="text">
++             <string>CCHP ETH MAC</string>
++            </property>
++            <property name="scaledContents">
++             <bool>false</bool>
++            </property>
++            <property name="alignment">
++             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
++            </property>
++            <property name="margin">
++             <number>0</number>
++            </property>
++           </widget>
++          </item>
++          <item>
++           <widget class="QLineEdit" name="CCHPMaclineEdit"/>
++          </item>
++         </layout>
++        </item>
++       </layout>
++      </widget>
++     </item>
++     <item>
++      <widget class="QGroupBox" name="groupBox_2">
++       <property name="title">
++        <string>baseband MAC</string>
++       </property>
++       <layout class="QVBoxLayout" name="verticalLayout">
++        <item>
++         <layout class="QHBoxLayout" name="horizontalLayout_6">
++          <item>
++           <layout class="QHBoxLayout" name="horizontalLayout_4">
++            <item>
++             <widget class="QLabel" name="label_3">
++              <property name="text">
++               <string>5G MAC</string>
++              </property>
++             </widget>
++            </item>
++            <item>
++             <widget class="QLineEdit" name="MAC5glineEdit_3"/>
++            </item>
++           </layout>
++          </item>
++          <item>
++           <layout class="QHBoxLayout" name="horizontalLayout_5">
++            <item>
++             <widget class="QLabel" name="label_4">
++              <property name="text">
++               <string>4G MAC</string>
++              </property>
++             </widget>
++            </item>
++            <item>
++             <widget class="QLineEdit" name="MAC4glineEdit_4"/>
++            </item>
++           </layout>
++          </item>
++         </layout>
++        </item>
++       </layout>
++      </widget>
++     </item>
++    </layout>
++   </widget>
++   <widget class="QPushButton" name="pushButton_3">
++    <property name="geometry">
++     <rect>
++      <x>230</x>
++      <y>210</y>
++      <width>114</width>
++      <height>32</height>
++     </rect>
++    </property>
++    <property name="text">
++     <string>generate</string>
++    </property>
++   </widget>
++  </widget>
++  <widget class="QMenuBar" name="menubar">
++   <property name="geometry">
++    <rect>
++     <x>0</x>
++     <y>0</y>
++     <width>800</width>
++     <height>22</height>
++    </rect>
++   </property>
++  </widget>
++  <widget class="QStatusBar" name="statusbar"/>
++ </widget>
++ <resources/>
++ <connections>
++  <connection>
++   <sender>pushButton</sender>
++   <signal>clicked()</signal>
++   <receiver>MainWindow</receiver>
++   <slot>opendir()</slot>
++   <hints>
++    <hint type="sourcelabel">
++     <x>365</x>
++     <y>316</y>
++    </hint>
++    <hint type="destinationlabel">
++     <x>289</x>
++     <y>315</y>
++    </hint>
++   </hints>
++  </connection>
++  <connection>
++   <sender>pushButton_2</sender>
++   <signal>clicked()</signal>
++   <receiver>MainWindow</receiver>
++   <slot>openme()</slot>
++   <hints>
++    <hint type="sourcelabel">
++     <x>212</x>
++     <y>334</y>
++    </hint>
++    <hint type="destinationlabel">
++     <x>471</x>
++     <y>394</y>
++    </hint>
++   </hints>
++  </connection>
++  <connection>
++   <sender>UPMaclineEdit_2</sender>
++   <signal>editingFinished()</signal>
++   <receiver>MainWindow</receiver>
++   <slot>inputUPM()</slot>
++   <hints>
++    <hint type="sourcelabel">
++     <x>187</x>
++     <y>78</y>
++    </hint>
++    <hint type="destinationlabel">
++     <x>133</x>
++     <y>266</y>
++    </hint>
++   </hints>
++  </connection>
++  <connection>
++   <sender>CCHPMaclineEdit</sender>
++   <signal>editingFinished()</signal>
++   <receiver>MainWindow</receiver>
++   <slot>inputCCHPM()</slot>
++   <hints>
++    <hint type="sourcelabel">
++     <x>613</x>
++     <y>86</y>
++    </hint>
++    <hint type="destinationlabel">
++     <x>561</x>
++     <y>117</y>
++    </hint>
++   </hints>
++  </connection>
++  <connection>
++   <sender>MAC5glineEdit_3</sender>
++   <signal>editingFinished()</signal>
++   <receiver>MainWindow</receiver>
++   <slot>input5gM()</slot>
++   <hints>
++    <hint type="sourcelabel">
++     <x>227</x>
++     <y>154</y>
++    </hint>
++    <hint type="destinationlabel">
++     <x>259</x>
++     <y>223</y>
++    </hint>
++   </hints>
++  </connection>
++  <connection>
++   <sender>MAC4glineEdit_4</sender>
++   <signal>editingFinished()</signal>
++   <receiver>MainWindow</receiver>
++   <slot>input4gM()</slot>
++   <hints>
++    <hint type="sourcelabel">
++     <x>426</x>
++     <y>150</y>
++    </hint>
++    <hint type="destinationlabel">
++     <x>438</x>
++     <y>250</y>
++    </hint>
++   </hints>
++  </connection>
++  <connection>
++   <sender>pushButton_3</sender>
++   <signal>clicked()</signal>
++   <receiver>MainWindow</receiver>
++   <slot>generatetxt()</slot>
++   <hints>
++    <hint type="sourcelabel">
++     <x>327</x>
++     <y>248</y>
++    </hint>
++    <hint type="destinationlabel">
++     <x>385</x>
++     <y>256</y>
++    </hint>
++   </hints>
++  </connection>
++ </connections>
++ <slots>
++  <slot>opendir()</slot>
++  <slot>openme()</slot>
++  <slot>inputUPM()</slot>
++  <slot>inputCCHPM()</slot>
++  <slot>input5gM()</slot>
++  <slot>input4gM()</slot>
++  <slot>generatetxt()</slot>
++ </slots>
++</ui>
+Index: mainuiexample.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- mainuiexample.py	(date 1531627500000)
++++ mainuiexample.py	(date 1531627500000)
+@@ -0,0 +1,205 @@
++# -*- coding: utf-8 -*-
++
++
++from PyQt5.QtWidgets import QApplication,QMainWindow,QFileDialog,QMessageBox
++import sys,re
++from mainui import Ui_MainWindow
++import os,openpyxl,xlrd
++import pandas as pd
++tablepath = os.path.join(os.path.dirname(__file__), "123.xlsx")
++
++class myui(QMainWindow, Ui_MainWindow):
++    def __init__(self):
++        super(myui, self).__init__()
++        self.setupUi(self)
++
++        self.UPMacadd = ""
++        self.newUPMacadd = ""
++        self.newUPIP = ""
++
++        self.CCHPMac = ""
++        self.newCCHPMAC = ""
++        self.newCCHPIP = ""
++
++        self.CPUAMACadd = ""
++        self.newCPUMACadd = ""
++        self.newCPUAIP = ""
++
++        self.LteuptrainMac = ""
++        self.newLteuptrainMac = ""
++        self.newLteuptrainIP = ""
++
++        self.MACflag4 = 0
++        self.MACflag3 = 0
++        self.MACflag2 = 0
++        self.MACflag1 = 0
++
++    def opendir(self):
++
++        file_path = QFileDialog.getSaveFileName(self, "open file", "","sdf(*.txt)",
++                                                    options=QFileDialog.DontUseNativeDialog)
++        print(file_path)
++
++    def openme(self):
++        msgBox = QMessageBox()
++        msgBox.setText("sdfdsfsdf")
++        msgBox.setInformativeText("Do you want to save your changes?")
++        msgBox.setStandardButtons(QMessageBox.Save | QMessageBox.Discard | QMessageBox.Cancel)
++        #msgBox.(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel)
++        msgBox.setDefaultButton(QMessageBox.Save)
++        ret = msgBox.exec()
++        print("info:",ret)
++
++        if ret == QMessageBox.Save:
++            file_save_path = QFileDialog.getSaveFileName(self,"save file","","all file(*.txt)",
++                                                         options=QFileDialog.DontUseNativeDialog)
++            print(file_save_path)
++
++        elif ret == QMessageBox.Cancel:
++            print("cancel")
++
++        else:
++            print("discard")
++
++    def inputUPM(self):
++        MAC = self.UPMaclineEdit_2.text()
++        if MAC != self.UPMacadd:
++            self.UPMacadd = MAC
++            ret = getMACaddandIP_tocsv(MAC)
++            if ret:
++                self.newUPMacadd, self.newUPIP = ret, ret[4:]
++                self.MACflag1 = True
++                print(self.newUPMacadd,"mac",self.newUPIP)
++            else:
++                self.MACflag1 = False
++                QMessageBox.warning(self,"unvalid MAC address","pls check MAC address")
++
++    def inputCCHPM(self):
++        MAC = self.CCHPMaclineEdit.text()
++        if MAC != self.CCHPMac:
++            self.CCHPMac = MAC
++            ret = getMACaddandIP_tocsv(MAC)
++            if ret:
++                self.newCCHPMAC, self.newCCHPIP = ret, ret[4:]
++                self.MACflag2 = True
++                print(self.newCCHPMAC, "mac", self.newCCHPIP)
++            else:
++                self.MACflag2 = False
++                QMessageBox.warning(self, "unvalid MAC address", "pls check MAC address")
++
++    def input5gM(self):
++        MAC = self.MAC5glineEdit_3.text()
++        if MAC != self.CPUAMACadd:
++            self.CPUAMACadd = MAC
++            ret = getMACaddandIP_tocsv(MAC)
++            if ret:
++                self.newCPUMACadd, self.newCPUAIP = ret, ret[4:]
++                self.MACflag3 = True
++                print(self.newCPUMACadd, "mac", self.newCPUAIP)
++            else:
++                self.MACflag3 = False
++                QMessageBox.warning(self, "unvalid MAC address", "pls check MAC address")
++
++    def input4gM(self):
++        MAC = self.MAC4glineEdit_4.text()
++        if MAC != self.LteuptrainMac:
++            self.LteuptrainMac = MAC
++            ret = getMACaddandIP_tocsv(MAC)
++            if ret:
++                self.newLteuptrainMac, self.newLteuptrainIP = ret, ret[4:]
++                self.MACflag4 = True
++                print(self.newLteuptrainMac, "mac", self.newLteuptrainIP)
++            else:
++                self.MACflag4 = False
++                QMessageBox.warning(self, "unvalid MAC address", "pls check MAC address")
++
++    def generatetxt(self):
++        #if self.MACflag1 and self.MACflag2 and self.MACflag3 and self.MACflag4:
++        if True:
++            readtablevalue(tablepath)
++            settablevalue(tablepath, self.newCCHPMAC, self.newCCHPIP)
++            print("\r\n after modify")
++            readtablevalue(tablepath)
++
++
++            print("pandas read")
++            pandasreadtable(tablepath)
++
++            #QMessageBox.information(self, "generate ok","save path")
++        else:
++            QMessageBox.warning(self, "unvalid MAC address", "pls check MAC address")
++
++def isValidMac(mac):
++    if re.match(r"^\s*([0-9a-fA-F]{2,2}:){5,5}[0-9a-fA-F]{2,2}\s*$", mac): return True
++    return False
++
++def getMACaddandIP_tocsv(mac):
++    result = re.match(r"^\s*([0-9a-fA-F]{2,2}:){5,5}[0-9a-fA-F]{2,2}\s*$", mac)
++    if result:
++        s = result.group().replace(":", "")
++        return s
++    return False
++
++# def readtablevalue(tablepath1):
++#     book = xlrd.open_workbook(tablepath1)
++#     work_sheet = book.sheet_by_index(0)
++#     length0 = work_sheet.nrows
++#     for i in work_sheet.col_values(0):
++#         print(str(i), "rows:",length0)
++    # for j in work_sheet.col_values(6):
++    #     print(str(j), "rows:",length0)
++#
++# def settablevalue(tablepath1, mac):
++#     workbook = xlrd.open_workbook(tablepath1)
++#     writebook = copy(workbook)
++#     writesheet = writebook.get_sheet(0)
++#     #writesheet.write(0, 6, mac)
++#     writesheet.write(1, 6, mac)
++#     writebook.save("table.xls")
++
++def readtablevalue(tablepath1):
++    book = openpyxl.load_workbook(tablepath1,read_only=True, data_only=True)
++    work_sheet = book["1"]
++    print("sheet name", work_sheet)
++    length0 = work_sheet.max_row
++    a2 = work_sheet["A2"]
++    # for i in range(length0):
++    #     print(str(work_sheet.cell(i+1,1).value), " rows: ", length0)
++    print(a2, a2.value)
++
++def settablevalue(tablepath1, mac, ip):
++    workbook = openpyxl.load_workbook(tablepath1)
++    #writebook = copy(workbook)
++    print(tablepath1)
++    #print(mac, ip)
++    work_sheet = workbook["1"]
++    #writesheet.write(0, 6, mac)
++    print(mac, ip)
++    work_sheet["G1"] = mac
++    work_sheet["G2"] = ip
++    #writebook.save("table.xls")
++
++
++    a2 = work_sheet["A2"]
++    print("A2 value:",a2, a2.value)
++    workbook.save("123.xlsx")
++    workbook = openpyxl.load_workbook(tablepath1)
++    workbook.save("123.xlsx")
++    # for i in range(length0):
++    #     print(str(work_sheet.cell(i+1,1).value), " rows: ", length0)
++    #print(a2, a2.value)
++
++def pandasreadtable(tablepath1):
++    d = pd.read_excel(tablepath, sheet_name="1",index_col=0)
++    print(d)
++
++
++
++
++
++if __name__ == "__main__":
++
++    app = QApplication(sys.argv)
++    main_gui = myui()
++    main_gui.show()
++    sys.exit(app.exec_())
+Index: queueexample.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- queueexample.py	(date 1531627500000)
++++ queueexample.py	(date 1531627500000)
+@@ -0,0 +1,45 @@
++# -*- coding: utf-8 -*-
++
++# -*- coding: utf-8 -*-
++
++import threading
++import time
++import queue
++
++SHARE_Q = queue.Queue()  # 构造一个不限制大小的的队列
++_WORKER_THREAD_NUM = 3  # 设置线程个数
++
++
++class MyThread(threading.Thread):
++
++    def __init__(self, func):
++        super(MyThread, self).__init__()
++        self.func = func
++
++    def run(self):
++        self.func()
++
++
++def worker():
++    global SHARE_Q
++    while not SHARE_Q.empty():
++        item = SHARE_Q.get()  # 获得任务
++        print("Processing : ",item)
++        time.sleep(1)
++
++
++def main():
++    global SHARE_Q
++    threads = []
++    for task in range(5):  # 向队列中放入任务
++        SHARE_Q.put(task)
++    for i in range(_WORKER_THREAD_NUM):
++        thread = MyThread(worker)
++        thread.start()
++        threads.append(thread)
++    for thread in threads:
++        thread.join()
++
++
++if __name__ == '__main__':
++    main()
+\ No newline at end of file
+diff --git 123.xlsx 123.xlsx
+new file mode 100644
+index 0000000000000000000000000000000000000000..06ea9d73ea97b34be42250cfea049bba3f736aae
+GIT binary patch
+literal 4980
+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
+
