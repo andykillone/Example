@@ -6,12 +6,68 @@ import sys,re
 from mainui import Ui_MainWindow
 import os,openpyxl,xlrd
 import pandas as pd
+from child import *
 tablepath = os.path.join(os.path.dirname(__file__), "123.xlsx")
+
+class mythread1(QtCore.QThread):
+    updatesignal = QtCore.pyqtSignal(str)
+    def __init__(self, func):
+        super(mythread1, self).__init__()
+        self.func = func
+        #self.cmd = cmd
+    def run(self):
+        print("run thread1")
+        self.result = self.func()
+        self.updatesignal.emit(str(self.result))
+    def getresult(self):
+        return self.result
+
+def func1():
+    list1 = list()
+    for i in range(1000):
+        list1.append("time is " + str(i))
+        print("time is " + str(i))
+    return list1
+
+class mychildui(QtWidgets.QWidget, Ui_Form):
+    def __init__(self):
+        super(mychildui, self).__init__()
+        self.setupUi(self)
+        self.setAttribute(QtCore.Qt.WA_QuitOnClose, False)
+        self.thread1 = mythread1(func1)
+        self.thread1.updatesignal.connect(self.updateUi)
+        self.show()
+        self.lineresult=""
+        self.thread1.start()
+
+    def updateUi(self, str):
+        self.textEdit.append(str)
+        print(self.thread1.getresult())
+        for s in self.thread1.getresult():
+            self.textEdit.append(s)
+        self.textEdit.moveCursor(QtGui.QTextCursor.End)
+
+    def printsomething(self):
+        item1 = self.listWidget.currentItem()
+        data1 = item1.data(QtCore.Qt.UserRole)
+        print(data1)
+
+    def additemstolist(self):
+        a = QtWidgets.QListWidgetItem()
+        value1 = (self.lineresult, "sadf")
+        a.setText(self.lineresult)
+        a.setData(QtCore.Qt.UserRole, value1)
+        self.listWidget.addItem(a)
+
+    def updateline(self):
+        self.lineresult = self.lineEdit.text()
 
 class myui(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(myui, self).__init__()
         self.setupUi(self)
+        self.setAttribute(QtCore.Qt.WA_QuitOnClose, True)
+        self.newwinlist = list()
 
         self.UPMacadd = ""
         self.newUPMacadd = ""
@@ -129,6 +185,12 @@ class myui(QMainWindow, Ui_MainWindow):
         else:
             QMessageBox.warning(self, "unvalid MAC address", "pls check MAC address")
 
+
+    def createnewwindow(self):
+        self.newwinlist.append(mychildui())
+
+
+
 def isValidMac(mac):
     if re.match(r"^\s*([0-9a-fA-F]{2,2}:){5,5}[0-9a-fA-F]{2,2}\s*$", mac): return True
     return False
@@ -192,7 +254,6 @@ def settablevalue(tablepath1, mac, ip):
 def pandasreadtable(tablepath1):
     d = pd.read_excel(tablepath, sheet_name="1",index_col=0)
     print(d)
-    print("")
 
 
 

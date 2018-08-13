@@ -95,6 +95,9 @@ class Ui_MainWindow(object):
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_3.setGeometry(QtCore.QRect(230, 210, 114, 32))
         self.pushButton_3.setObjectName("pushButton_3")
+        self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_4.setGeometry(QtCore.QRect(300, 390, 114, 32))
+        self.pushButton_4.setObjectName("pushButton_4")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 22))
@@ -112,6 +115,7 @@ class Ui_MainWindow(object):
         self.MAC5glineEdit_3.editingFinished.connect(MainWindow.input5gM)
         self.MAC4glineEdit_4.editingFinished.connect(MainWindow.input4gM)
         self.pushButton_3.clicked.connect(MainWindow.generatetxt)
+        self.pushButton_4.clicked.connect(MainWindow.createnewwindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -127,4 +131,5 @@ class Ui_MainWindow(object):
         self.label_3.setText(_translate("MainWindow", "5G MAC"))
         self.label_4.setText(_translate("MainWindow", "4G MAC"))
         self.pushButton_3.setText(_translate("MainWindow", "generate"))
+        self.pushButton_4.setText(_translate("MainWindow", "new window"))
 
