@@ -2,7 +2,9 @@
 
 
 import time
-import xlrd
+
+#import xlrd
+
 #import xlwt
 
 
