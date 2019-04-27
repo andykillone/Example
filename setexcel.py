@@ -40,8 +40,11 @@ def Set_Excel_Statis(filepath, testcase_statis_list):
     # 另存为excel文件，并将文件命名
     new_excel.save(filepath)
 
+    
+    
+    
 def Generate_Html(file):
-    xd = pd.ExcelFile(file)
+    #xd = pd.ExcelFile(file) 
     pd.set_option('display.max_colwidth',1000)#设置列的宽度，以防止出现省略号
     df = xd.parse()
     with codecs.open('example.html','w') as html_file:
