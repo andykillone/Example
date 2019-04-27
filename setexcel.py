@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
+
+import time
 import xlrd
 import xlwt
 from xlutils.copy import copy
 import os
-import codecs
+#import codecs
 import pandas as pd
 
 testcase_statis_list = [
