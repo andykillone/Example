@@ -47,8 +47,12 @@ def Generate_Html(file):
     with codecs.open('example.html','w') as html_file:
         html_file.write(df.to_html(header = True,index = False))
 
+        
+        
 
 if __name__ == '__main__':
+    
+    
     filepath = os.path.abspath(os.path.dirname(__file__))
     file = os.path.join(filepath, 'setexample.xls')
     Set_Excel_Statis(file, testcase_statis_list)
